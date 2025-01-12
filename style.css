@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+:root {
+    /* Primary */
+
+    --Paleblue: hsl(225, 100%, 94%);
+    --Brightblue: hsl(245, 75%, 52%);
+
+    /* Neutral */
+
+    --Verypaleblue: hsl(225, 100%, 98%);
+    --Desaturatedblue: hsl(224, 23%, 55%);
+    --Darkblue: hsl(223, 47%, 23%);
+}
+
+body {
+    background: url("images/pattern-background-desktop.svg") no-repeat; 
+    background-color: var(--Paleblue);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    height: 120vh;
+}
+
+main {
+    width: 25rem;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.cover {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container h1 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--Darkblue);
+    margin-bottom: 1.5rem;
+}
+
+.description {
+    text-align: center;
+    font-weight: 700;
+    color: var(--Desaturatedblue);
+    margin-bottom: 2rem;
+}
+
+.song-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--Verypaleblue);
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.text p:first-child {
+    font-weight: 900;
+    color: var(--Darkblue);
+}
+
+.text p:last-child {
+    font-weight: 400;
+    color: var(--Desaturatedblue);
+}
+
+.txt {
+    color: var(--Brightblue);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.txt:hover {
+    text-decoration: none;
+    color: var(--Desaturatedblue);
+    cursor: pointer;
+}
+
+.confirm-button {
+    background-color: var(--Brightblue);
+    border: none;
+    width: 100%;
+    height: 3rem;
+    border-radius: 10px;
+    font-weight: 900;
+    color: white;
+    box-shadow: 0 15px 20px 1px var(--Paleblue);
+    margin-bottom: 1rem;
+}
+
+.confirm-button:hover {
+    cursor: pointer;
+    background-color: var(--Desaturatedblue);
+}
+
+.cancel-button {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 3rem;
+    border-radius: 10px;
+    font-weight: 900;
+    color: var(--Brightblue);
+}
+
+.cancel-button:hover {
+    color: var(--Darkblue);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        background: url("images/pattern-background-mobile.svg") no-repeat;
+        background-color: var(--Paleblue);
+    }
+
+    main {
+        width: 20rem;
+    }
+
+    .song-row {
+        padding: 1.5rem 0.8rem;
+    }
+}
